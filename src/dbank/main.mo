@@ -2,13 +2,13 @@ import Debug "mo:base/Debug";
 import Nat "mo:base/Nat";
 
 actor DBank {
-  var currentValue = 300;
-  currentValue := 1000;
+  stable var currentValue = 300;
+  // currentValue := 1000;
 
   // Debug.print(debug_show (currentValue))
   public func topUp(amount : Nat) {
     currentValue += amount;
-    Debug.print(debug_show (currentValue));
+    // Debug.print(debug_show (currentValue));
   };
 
   public func withdraw(amount : Nat) {
@@ -24,5 +24,5 @@ actor DBank {
     return currentValue
 
   };
-  hellow;
+
 };
